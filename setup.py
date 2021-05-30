@@ -11,24 +11,33 @@ if __name__ == '__main__':
         long_description = readme_file.read()
 
     setup(
-        name='identifycompiler',
+        name='compiler-identification',
         version='1.0.0',
-        url='https://github.com/yugabyte/identifycompiler',
+        url='https://github.com/yugabyte/compiler-identification',
         author='Mikhail Bautin',
         author_email='mbautin@users.noreply.github.com',
         description='Identifying the properties of a C/C++ compiler, such as type and version',
-        packages=find_packages(),
-        install_requires=[],
+        packages=find_packages(where='src'),
+        install_requires=['packaging', 'codecheck >= 1.0.6'],
         long_description=long_description,
         long_description_content_type='text/markdown',
+
         extras_require={
             # Following advice in this answer: https://stackoverflow.com/a/28842733/220215
-            # Install with: pip install -e '.[dev]'
+            # Install with:
+            # pip install -e '.[dev]'
             'dev': [
                 'pycodestyle',
                 'mypy',
                 'twine',
                 'codecheck'
             ]
-        }
+        },
+        package_dir={"": "src"},
+        classifiers=[
+            "Programming Language :: Python :: 3",
+            "License :: OSI Approved :: Apache Software License",
+            "Operating System :: OS Independent",
+        ],
+        python_requires=">=3.6",
     )

@@ -1,0 +1,4 @@
+Alpine clang version 10.0.1
+Target: x86_64-alpine-linux-musl
+Thread model: posix
+InstalledDir: /usr/bin
