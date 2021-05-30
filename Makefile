@@ -26,5 +26,5 @@ $(VENV_NAME)/bin/activate: setup.py
 	touch "$(VENV_NAME)/bin/activate"
 
 check: venv
-	$(VENV_PYTHON) -m codecheck
+	$(VENV_PYTHON) -m codecheck --python-interpreter "$(VENV_PYTHON)"
 	$(VENV_PYTHON) -m unittest discover -s tests -p '*_test.py'

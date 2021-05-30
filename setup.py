@@ -12,13 +12,13 @@ if __name__ == '__main__':
 
     setup(
         name='compiler-identification',
-        version='1.0.1',
+        version='1.0.0',
         url='https://github.com/yugabyte/compiler-identification',
         author='Mikhail Bautin',
         author_email='mbautin@users.noreply.github.com',
         description='Identifying the properties of a C/C++ compiler, such as type and version',
         packages=find_packages(where='src'),
-        install_requires=['packaging', 'codecheck >= 1.0.6'],
+        install_requires=['packaging', 'codecheck >= 1.0.7'],
         long_description=long_description,
         long_description_content_type='text/markdown',
 
@@ -29,7 +29,6 @@ if __name__ == '__main__':
             'dev': [
                 'pycodestyle',
                 'mypy',
-                'twine',
                 'codecheck'
             ]
         },
