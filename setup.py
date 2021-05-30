@@ -18,7 +18,7 @@ if __name__ == '__main__':
         author_email='mbautin@users.noreply.github.com',
         description='Identifying the properties of a C/C++ compiler, such as type and version',
         packages=find_packages(where='src'),
-        install_requires=['packaging', 'codecheck >= 1.0.7'],
+        install_requires=['packaging', 'codecheck >= 1.0.8'],
         long_description=long_description,
         long_description_content_type='text/markdown',
 

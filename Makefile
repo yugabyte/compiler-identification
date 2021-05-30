@@ -27,4 +27,9 @@ $(VENV_NAME)/bin/activate: setup.py
 
 check: venv
 	$(VENV_PYTHON) -m codecheck --python-interpreter "$(VENV_PYTHON)"
+	# Run tests again, although codecheck should have run them.
 	$(VENV_PYTHON) -m unittest discover -s tests -p '*_test.py'
+
+clean:
+	git clean -dxf
+
