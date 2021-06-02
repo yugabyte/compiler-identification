@@ -26,10 +26,10 @@ $(VENV_NAME)/bin/activate: setup.py
 	touch "$(VENV_NAME)/bin/activate"
 
 check: venv
+	rm -rf .mypy_cache  # TODO: codecheck should do this.
 	$(VENV_PYTHON) -m codecheck --python-interpreter "$(VENV_PYTHON)"
 	# Run tests again, although codecheck should have run them.
 	$(VENV_PYTHON) -m unittest discover -s tests -p '*_test.py'
 
 clean:
 	git clean -dxf
-
