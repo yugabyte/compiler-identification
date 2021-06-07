@@ -19,4 +19,4 @@ In [4]: identification.parsed_version
 Out[4]: <Version('12.0.5')>
 ```
 
-The `parsed_version`, which is a `Version` instance from the [`packaging`](https://pypi.org/project/packaging/) module, allows to do proper version comparisons.
+The `parsed_version`, which is a `Version` instance from the [`packaging`](https://pypi.org/project/packaging/) module, allows to do proper version comparisons. See https://packaging.pypa.io/en/latest/version.html for more details.
