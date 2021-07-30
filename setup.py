@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     setup(
         name='compiler-identification',
-        version='1.0.2',
+        version='1.0.3',
         url='https://github.com/yugabyte/compiler-identification',
         author='Mikhail Bautin',
         author_email='mbautin@users.noreply.github.com',
