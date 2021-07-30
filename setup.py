@@ -18,6 +18,7 @@ if __name__ == '__main__':
         author_email='mbautin@users.noreply.github.com',
         description='Identifying the properties of a C/C++ compiler, such as type and version',
         packages=find_packages(where='src'),
+        package_data={'compiler_identification': ['py.typed']},
         install_requires=[
             'packaging',
             'codecheck >= 1.0.9',
